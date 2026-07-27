@@ -227,6 +227,23 @@ h1{font-family:var(--fd);font-size:clamp(2rem,5.5vw,3.8rem);letter-spacing:6px;l
 }
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:rgba(139,92,246,0.2);border-radius:2px}
 ::selection{background:rgba(139,92,246,0.2)}
+
+/* ===== Responsive Standings Upgrade ===== */
+.standings-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;box-shadow:0 0 25px rgba(139,92,246,.25)}
+.stbl{min-width:760px}
+.stbl tbody tr{transition:.35s}
+.stbl tbody tr:hover{transform:scale(1.01);background:linear-gradient(90deg,rgba(139,92,246,.15),rgba(6,182,212,.08))}
+.stbl tbody tr:nth-child(1){background:linear-gradient(90deg,rgba(255,215,0,.12),transparent)}
+.stbl tbody tr:nth-child(2){background:linear-gradient(90deg,rgba(192,192,192,.08),transparent)}
+.stbl tbody tr:nth-child(3){background:linear-gradient(90deg,rgba(205,127,50,.08),transparent)}
+.pts-val{animation:pulsePoints 2s infinite}
+@keyframes pulsePoints{50%{transform:scale(1.15);text-shadow:0 0 16px #06b6d4}}
+@media(max-width:768px){
+.standings-wrap{overflow-x:auto}
+.stbl{min-width:760px}
+.stbl th,.stbl td{white-space:nowrap}
+}
+
 </style>
 </head>
 <body>
